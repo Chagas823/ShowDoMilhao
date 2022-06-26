@@ -1,0 +1,26 @@
+<div class="row d-flex justify-content-center">
+            <button type="button" class="btn " id="btn1"></button>
+            <button type="button" class="btn " id="btn2"></button>
+            <button type="button" class="btn " id="btn3"></button>
+            <button type="button" class="btn " id="btn4"></button>
+          </div>
+
+    resposta1 = "<a id = 'erradaBT1' data-correta=" + divPergunta[aleatorio2] + ">" + divPergunta[aleatorio2] + "</a>";]
+
+
+
+linha 35
+pergunta = "<h2 class = 'text-center'>" + data[i].pergunta + "</h2>"
+                $("#pergunta").html(pergunta);
+
+                correta = "<a id = 'btn3' data-correta=" + divPergunta[aleatorio1] + ">" + divPergunta[aleatorio1] + "</a>";
+                $("#btn1").html(correta);
+
+                resposta1 = "<a id = 'erradaBT1' data-correta=" + divPergunta[aleatorio2] + ">" + divPergunta[aleatorio2] + "</a>";
+                $("#btn2").html(resposta1);
+
+                resposta2 = "<a id = 'erradaBT2' data-correta=" + divPergunta[aleatorio3] + ">" + divPergunta[aleatorio3] + "</a>";
+                $("#btn3").html(resposta2);
+
+                resposta3 = "<a id = 'erradaBT3' data-correta=" + divPergunta[aleatorio4] + ">" + divPergunta[aleatorio4] + "</a>";
+                $("#btn4").html(resposta3);

@@ -1,0 +1,108 @@
+let eliminarResposta = 0;
+let perguntas = JSON.parse(sessionStorage.getItem('perguntas'));
+console.log(perguntas);
+console.log(eliminarResposta);
+$(document).ready(function () {
+    function showdata() {
+        output = "";
+        $.ajax({
+            url: "carregarPergunta.php",
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                //console.log(data[0].pergunta);
+                
+                
+                let i;
+                let conta = 0;
+                while(data[conta] != undefined){
+                    conta++;
+                }
+                i = Math.floor(Math.random()*conta);
+                console.log(i);
+                let divPergunta = [data[i].resposta1, data[i].resposta2, data[i].resposta3, data[i].correta];
+                //console.log(divPergunta);
+                let aleatorio1 = Math.floor(Math.random() * 4);
+                let aleatorio2 = Math.floor(Math.random() * 4);
+                while (aleatorio2 == aleatorio1) {
+                    aleatorio2 = Math.floor(Math.random() * 4);
+                }
+                let aleatorio3 = Math.floor(Math.random() * 4);
+                while (aleatorio3 == aleatorio1 || aleatorio3 == aleatorio2) {
+                    aleatorio3 = Math.floor(Math.random() * 4);
+                }
+                let aleatorio4 = Math.floor(Math.random() * 4);
+                while (aleatorio4 == aleatorio1 || aleatorio4 == aleatorio2 || aleatorio4 == aleatorio3) {
+                    aleatorio4 = Math.floor(Math.random() * 4);
+                }
+                console.log(aleatorio1, aleatorio2, aleatorio3, aleatorio4);
+                pergunta = data[i].pergunta;
+                $("#pergunta").html(pergunta);
+                correta = divPergunta[aleatorio1];
+                $("#btn1").html(correta);
+                resposta1 = divPergunta[aleatorio2];
+                $("#btn2").html(resposta1);
+                resposta2 = divPergunta[aleatorio3];
+                $("#btn3").html(resposta2);
+                resposta3 = divPergunta[aleatorio4];
+                $("#btn4").html(resposta3);
+                
+                /***console.log(data);
+                let i = i;
+                tbody = "<div>"+ data[i].name +"</div>"
+               $("#msg").html(tbody);
+               let name = $("#msg").text()
+               console.log(name)
+               if(name == "Chagas"){
+                   console.log("certo")
+               }*/
+
+                $("#btn1").click(function () {
+                    if ($("#btn1").text() == data[i].correta) {
+                        alert("correta resposta");
+                        
+                        showdata();
+                    } else {
+                        alert("errada");
+                        $("#btn1").css({ color: "red" });
+                    }
+                })
+
+                $("#btn2").click(function () {
+                    if ($("#btn2").text() == data[i].correta) {
+                        alert("correta resposta");
+                        
+                        showdata();
+                    } else {
+                        alert("errada");
+                        $("#btn2").css({ background: "red" });
+                    }
+                })
+
+                $("#btn3").click(function () {
+                    if ($("#btn3").text() == data[i].correta) {
+                        alert("correta resposta");
+                       
+                        showdata();
+                    } else {
+                        alert("errada");
+                        $("#btn3").css({ background: "red" });
+                    }
+                })
+                $("#btn4").click(function () {
+                    if ($("#btn4").text() == data[i].correta) {
+                        alert("correta resposta");
+                        
+                        showdata();
+                    } else {
+                        alert("errada");
+                        $("#btn4").css({ background: "red" });
+                    }
+                })
+            }
+        })
+
+
+    }
+    showdata();
+});

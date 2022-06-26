@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Projeto Show do Milhão</title>
+
+</head>
+
+<body>
+  <style>
+    .table-bg {
+      color: white;
+      text-align: center;
+      border-color: white;
+      /** Insere a borda azulbranca. **/
+      border-style: dotted;
+      /** Define a borda pontilhada. **/
+      border-radius: 15px 15px 15px 15px;
+      width: 430px;
+    }
+  </style>
+  </head>
+  <div class="card">
+    <section class="profile">
+      <div class="profile__informations">
+        <div class="profile__picture" id="img"></div>
+        <p class="profile__job" id="user">Bem Vindo(a):</p>
+        <font color=white>
+
+          </fonte>
+      </div>
+    </section>
+    <div class="toggle">
+      <label>
+        <div class="skills__button actived__button">Menu</div>
+        <div class="projects__button deactived__button">Hall da Fama</div>
+        <input type="checkbox" name="" id="toggle__checkbox" />
+        <span></span>
+      </label>
+    </div>
+    <section class="skills fadeIn">
+      <center>
+        <br>
+        <a href="#" class="homebutton" id="jogar">JOGAR</a>
+        <br>
+        <br>
+        <a class='homebutton' href='editarconta.html' title='Editar'>Editar Conta
+          <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil'
+            viewBox='0 0 16 16'>
+            <path
+              d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z' />
+          </svg>
+        </a>
+        <br>
+        <br>
+        <a  href='excluirconta.html' class="homebutton">Excluir Conta</a>
+        <br>
+        <br>
+        <a href="adicionarpergunta.html" class="homebutton">Adicionar Pergunta</a>
+        <br>
+        <br>
+        <a href="#" class="homebutton">Lista de Perguntas</a>
+        <br>
+        <br>
+        <a href="estatistica.html" class="homebutton">Estatísticas</a>
+        <br>
+        <br>
+        <a class="homebutton" id="sair">Sair</a>
+        <br>
+      </center>
+    </section>
+    <section class="projects fadeOut">
+      <br>
+      <table class="table text-white table-bg">
+        <thead>
+          <tr>
+            <th scope="col" id="posicao1"> Posição </th>
+            <th scope="col" id="nickname1"> Nikname </th>
+            <th scope="col" id="pontuacao1"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao2"> Posição </th>
+            <th scope="col" id="nickname2"> Nikname </th>
+            <th scope="col" id="pontuacao2"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao3"> Posição </th>
+            <th scope="col" id="nickname3"> Nikname </th>
+            <th scope="col" id="pontuacao3"> Pontuação </th>
+          </tr>
+        </thead>
+
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao4"> Posição </th>
+            <th scope="col" id="nickname4"> Nikname </th>
+            <th scope="col" id="pontuacao4"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao5"> Posição </th>
+            <th scope="col" id="nickname5"> Nikname </th>
+            <th scope="col" id="pontuacao5"> Pontuação </th>
+          </tr>
+        </thead>
+
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao6"> Posição </th>
+            <th scope="col" id="nickname6"> Nikname </th>
+            <th scope="col" id="pontuacao6"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao7"> Posição </th>
+            <th scope="col" id="nickname7"> Nikname </th>
+            <th scope="col" id="pontuacao7"> Pontuação </th>
+          </tr>
+        </thead>
+
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao8"> Posição </th>
+            <th scope="col" id="nickname8"> Nikname </th>
+            <th scope="col" id="pontuacao8"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao9"> Posição </th>
+            <th scope="col" id="nickname9"> Nikname </th>
+            <th scope="col" id="pontuacao9"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao10"> Posição </th>
+            <th scope="col" id="nickname10"> Nikname </th>
+            <th scope="col" id="pontuacao10"> Pontuação </th>
+          </tr>
+        </thead>
+
+        <thead>
+          <tr>
+            <th scope="col" id="posicao11"> Posição </th>
+            <th scope="col" id="nickname11"> Nikname </th>
+            <th scope="col" id="pontuacao11"> Pontuação </th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <footer>
+    <p class="copy">Copyright ©2022 Elimar Ximenes. All Rights Reserved</p>
+  </footer>
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

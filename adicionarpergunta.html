@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>cadastrar</title>
+  <style>
+    div {
+      /*background-color: rgba(0, 0, 0, 0.6);*/
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 80px;
+      border-radius: 15px;
+      color: #fff;
+      border-style: dotted;
+      /** Define a borda pontilhada. **/
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .homebutton {
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 10px;
+      color: white;
+      font-size: 25px;
+
+    }
+
+    .homebutton:hover {
+      background-color: deepskyblue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <div>
+      <h1>cadastrar pergunta</h1>
+      <p>pergunta</p>
+      <input  id="pergunta" placeholder="pergunta"></br></br>
+      <p>resposta 1</p>
+      <input  id="resposta1" placeholder="resposta1"></br></br>
+      <p>resposta 2</p>
+      <input  id="resposta2" placeholder="resposta2"></br></br>
+      <p>resposta 3</p>
+      <input  id="resposta3" placeholder="resposta3"></br></br>
+      <p>correta</p>
+      <input  id="correta" placeholder="correta"></br></br>
+      
+      <a type="button" id="btnCadastrar" value="submit" class="homebutton"> cadastrar</a></br></br>
+
+      
+    </div>
+
+
+    
+
+  </form>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/adicionarpergunta.js"></script>
+</body>
+
+</html>
