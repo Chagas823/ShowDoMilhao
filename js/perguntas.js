@@ -122,6 +122,7 @@ function responde(i, eliminar) {
             denuncia++;
             id_pergunta_denuciada = data[i].id
           console.log(denuncia)
+          alert("denunciada")
         }
 
     })
