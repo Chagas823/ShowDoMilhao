@@ -2,7 +2,7 @@
 console.log(sessionStorage.getItem("voltar"))
 let eliminarResposta = 0;
 let data = JSON.parse(sessionStorage.getItem('perguntas'));
-if(data == undefined){
+if (data == undefined) {
     data = carregar()
 }
 //let data = carregar();
@@ -36,7 +36,7 @@ function removerTags(html) {
 function responde(i, eliminar, id_pergunta_denuciada) {
 
     console.log("i é igual a " + i);
-    
+
     if (eliminar == 1) {
         console.log("mudando css")
         document.getElementById("div2").removeAttribute("style");
@@ -120,14 +120,14 @@ function responde(i, eliminar, id_pergunta_denuciada) {
     }
 
     /**denuncia pergunta */
-    document.getElementById("denunciar").onclick = function() {
-        if (data[i].id == jogador_denuncias.denuncia1 || data[i].id == jogador_denuncias.denuncia2 || data[i].id == jogador_denuncias.denuncia3 || data[i].id == jogador_denuncias.denuncia4 ||data[i].id == jogador_denuncias.denuncia5 ||data[i].id == jogador_denuncias.denuncia6 ||data[i].id == jogador_denuncias.denuncia7) {
+    document.getElementById("denunciar").onclick = function () {
+        if (data[i].id == jogador_denuncias.denuncia1 || data[i].id == jogador_denuncias.denuncia2 || data[i].id == jogador_denuncias.denuncia3 || data[i].id == jogador_denuncias.denuncia4 || data[i].id == jogador_denuncias.denuncia5 || data[i].id == jogador_denuncias.denuncia6 || data[i].id == jogador_denuncias.denuncia7) {
             snackbar("você já denunciou essa pergunta")
-        }else{
+        } else {
             denuncia++;
             id_pergunta_denuciada.push(data[i].id)
-          console.log(id_pergunta_denuciada)
-          snackbar("denunciada")
+            console.log(id_pergunta_denuciada)
+            snackbar("denunciada")
         }
 
     }
@@ -143,11 +143,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                     somaAjuda(id)
                 }
                 premiacao(i, id, null);
-                if(denuncia >=0){
+                if (denuncia >= 0) {
                     for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                         inserirdenuncia(id, id_pergunta_denuciada[index])
-                        
-                       }
+
+                    }
                 }
                 vitoria(id)
             }
@@ -158,11 +158,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                 somaAjuda(id)
 
             }
-            if(denuncia >=0){
-               for (let index = 0; index < id_pergunta_denuciada.length ; index++) {
-                inserirdenuncia(id, id_pergunta_denuciada[index])
-                
-               }
+            if (denuncia >= 0) {
+                for (let index = 0; index < id_pergunta_denuciada.length; index++) {
+                    inserirdenuncia(id, id_pergunta_denuciada[index])
+
+                }
             }
             //alert("errada");
             premiacao(i, id, false);
@@ -180,11 +180,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                     somaAjuda(id)
                 }
                 premiacao(i, id, null);
-                if(denuncia >=0){
-                    for (let index = 0; index < id_pergunta_denuciada.length ; index++) {
+                if (denuncia >= 0) {
+                    for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                         inserirdenuncia(id, id_pergunta_denuciada[index])
-                        
-                       }
+
+                    }
                 }
                 vitoria(id)
             }
@@ -197,16 +197,16 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                 somaAjuda(id)
 
             }
-            if(denuncia >=0){
+            if (denuncia >= 0) {
                 if (eliminar == 1) {
                     somaAjuda(id)
                 }
                 for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                     inserirdenuncia(id, id_pergunta_denuciada[index])
-                    
-                   }
+
+                }
             }
-         
+
             //alert("errada");
             premiacao(i, id, false);
             derrota(id);
@@ -223,11 +223,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                     somaAjuda(id)
                 }
                 premiacao(i, id, null);
-                if(denuncia >=0){
-                    for (let index = 0; index < id_pergunta_denuciada.length ; index++) {
+                if (denuncia >= 0) {
+                    for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                         inserirdenuncia(id, id_pergunta_denuciada[index])
-                        
-                       }
+
+                    }
                 }
                 vitoria(id)
             }
@@ -239,11 +239,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
             if (eliminar == 1) {
                 somaAjuda(id)
             }
-            if(denuncia >=0){
+            if (denuncia >= 0) {
                 for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                     inserirdenuncia(id, id_pergunta_denuciada[index])
-                    
-                   }
+
+                }
             }
             //alert("errada");
             premiacao(i, id, false);
@@ -260,11 +260,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
                 if (eliminar == 1) {
                     somaAjuda(id)
                 }
-                if(denuncia >=0){
+                if (denuncia >= 0) {
                     for (let index = 0; index < id_pergunta_denuciada.length; index++) {
                         inserirdenuncia(id, id_pergunta_denuciada[index])
-                        
-                       }
+
+                    }
                 }
                 vitoria(id)
             }
@@ -276,11 +276,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
             if (eliminar == 1) {
                 somaAjuda(id)
             }
-            if(denuncia >=0){
+            if (denuncia >= 0) {
                 for (let index = 0; index < id_pergunta_denuciada.length - 1; index++) {
                     inserirdenuncia(id, id_pergunta_denuciada[index])
-                    
-                   }
+
+                }
             }
             premiacao(i, id, false);
             derrota(id);
@@ -322,11 +322,11 @@ function responde(i, eliminar, id_pergunta_denuciada) {
         if (eliminar == 1) {
             somaAjuda(id)
         }
-        if(denuncia >=0){
+        if (denuncia >= 0) {
             for (let index = 0; index < id_pergunta_denuciada.length - 1; index++) {
                 inserirdenuncia(id, id_pergunta_denuciada[index])
-                
-               }
+
+            }
         }
         premiacao(i, id, true);
         parar_partida(id);
@@ -448,6 +448,7 @@ function premiacao(i, id, parar) {
     //errou na setima pergunta
     else if (i == 6 && parar == false) {
         dinheiro = 0;
+        sessionStorage.setItem("vitorias", 1)
         sessionStorage.setItem("dinheiro", dinheiro);
         salvaPontos(0, id);
     }
@@ -515,8 +516,8 @@ function inserirdenuncia(jogador_id, pergunta_id) {
 
         success: function (data) {
             console.log(data);
-           
-            
+
+
         },
 
     })
@@ -584,7 +585,7 @@ function carregar() {
 
         showdata()
         somaPartidasJogadas()
-      return valor;
+        return valor;
     })
 }
 
@@ -611,6 +612,8 @@ function procura_jogadorDenuncia(jogador_id, pergunta_id) {
 
 function somaPartidasJogadas() {
     console.log(id);
+    sessionStorage.setItem('partidas', 1)
+    
     data = {
         id: id
     }
@@ -632,7 +635,7 @@ function snackbar(mensagem) {
     x.innerHTML = mensagem
     // Add the "show" class to DIV
     x.className = "show";
-  
+
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}

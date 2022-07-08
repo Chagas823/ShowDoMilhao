@@ -1,3 +1,5 @@
+function insertAfter(newNode, existingNode) { existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling); }
+
 let nome = document.getElementById("nome");
 let nick = document.getElementById("nick");
 let senha = document.getElementById("senha");
@@ -12,8 +14,30 @@ let id = sessionStorage.getItem("id")
 
 let btnAtualizar = document.getElementById("btnAtualizar")
 
+let vitorias = sessionStorage.getItem("vitorias")
+let btn7 = document.createElement("img")
 console.log(id)
-
+let avatar = 0;
+if(vitorias >=1){
+    
+    
+    btn7.src = "img/7.jpg"
+    
+    btn7.height = 70
+    console.log(btn7)
+    let pai = btn5.parentNode; 
+    insertAfter(btn7, btn5)
+    btn7.onclick = function () {
+        avatar = 7;
+        btn7.className = "maxSize"
+        console.log("clicado")
+        btn1.className = "form-group"
+        btn2.className = "form-group"
+        btn5.className = "form-group"
+        btn3.className = "form-group"
+        btn4.className = "form-group"
+    }
+}
 
 
 
@@ -38,7 +62,7 @@ $.ajax({
         senha.value = data.senha;
     }
 })
-let avatar = 0;
+
 
 
 btn1.onclick = function () {
@@ -50,6 +74,8 @@ btn1.onclick = function () {
     btn5.className = "form-group"
     btn3.className = "form-group"
     btn4.className = "form-group"
+
+    btn7.className = "form-group"
 }
 btn2.onclick = function () {
     avatar = 2;
@@ -60,6 +86,8 @@ btn2.onclick = function () {
     btn1.className = "form-group"
     btn3.className = "form-group"
     btn4.className = "form-group"
+
+    btn7.className = "form-group"
 }
 btn3.onclick = function () {
     avatar = 3;
@@ -69,6 +97,7 @@ btn3.onclick = function () {
     btn1.className = "form-group"
     btn5.className = "form-group"
     btn4.className = "form-group"
+    btn7.className = "form-group"
 }
 btn4.onclick = function () {
     avatar = 4;
@@ -78,6 +107,7 @@ btn4.onclick = function () {
     btn1.className = "form-group"
     btn3.className = "form-group"
     btn5.className = "form-group"
+    btn7.className = "form-group"
 }
 btn5.onclick = function () {
     avatar = 5;
@@ -87,6 +117,7 @@ btn5.onclick = function () {
     btn1.className = "form-group"
     btn3.className = "form-group"
     btn4.className = "form-group"
+    btn7.className = "form-group"
     console.log("clicado")
 
 }
@@ -119,3 +150,6 @@ $(document).ready(function () {
 
 
 });
+
+
+
