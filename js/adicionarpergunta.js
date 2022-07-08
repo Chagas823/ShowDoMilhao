@@ -12,7 +12,7 @@ $("#btnPergunta").click(function (e) {
     mydata = {
         pergunta: pergunta, resposta1: resposta1,
         resposta2: resposta2, resposta3: resposta3,
-        correta: correta
+        correta: correta, validacao: false
     }
 
     console.log(mydata);

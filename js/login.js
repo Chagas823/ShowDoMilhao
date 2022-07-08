@@ -24,6 +24,7 @@ $(document).ready(function () {
                 console.log(data.nome);
                 sessionStorage.setItem('data', data.nickname)
                 sessionStorage.setItem('id', data.id)
+                sessionStorage.setItem('partidas', data.partidasjogadas)
                 sessionStorage.setItem('avatar', data.avatar)
                 let user = $("#user");
                 //user = "<h2>"+data.nome+ "</h2>";

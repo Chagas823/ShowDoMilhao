@@ -11,11 +11,11 @@ $correta = $mydata['correta'];
 $resposta1 = $mydata['resposta1'];
 $resposta2 = $mydata['resposta2'];
 $resposta3 = $mydata['resposta3'];
-
+$validacao = 0;
 
 if(!empty($pergunta) && !empty($correta) && !empty($resposta2)){
     $sql = "INSERT INTO perguntas(pergunta, resposta1, resposta2,
-    resposta3, correta) values('{$pergunta}','{$resposta1}','{$resposta2}','{$resposta3}','{$correta}')";
+    resposta3, correta, validacao) values('{$pergunta}','{$resposta1}','{$resposta2}','{$resposta3}','{$correta}', '$validacao')";
     if($conn->query($sql)==TRUE){
         echo "cadastrado";
     }else{

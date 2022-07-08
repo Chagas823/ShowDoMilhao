@@ -18,7 +18,11 @@ jogar.addEventListener("click", () => {
     carregar()
 })
 
-
+let partidas = sessionStorage.getItem('partidas')
+console.log(partidas)
+if(partidas == 0){
+    alert
+}
 function carregar() {
 
     $(document).ready(function () {
@@ -95,4 +99,46 @@ function procura_jogadorDenuncia(jogador_id, pergunta_id) {
 
     })
     return valor;
+}
+
+
+function jogador_foi_escolhido_para_votar(jogador_id){
+    data = { jogador_id: jogador_id }
+
+    let valor;
+    $.ajax({
+        url: "jogador_foi_escolhido_para_votar.php",
+        method: "POST",
+        dataType: "json",
+        async: false,
+        data: JSON.stringify(data),
+
+        success: function (data) {
+            console.log(data[0].pergunta_id)
+            if(data[0].pergunta_id !== undefined){
+                valor = data
+            }else{
+                valor = undefined;
+            }
+            //console.log(data[0].pergunta_id)
+
+        },
+
+    })
+    return valor;
+}
+let escolhido = jogador_foi_escolhido_para_votar(id)
+console.log(escolhido)
+if(escolhido !== undefined){
+    alert("voê foi escolhido para decidir se uma pergunta será adicionada")
+    let btnVotarAdiciona = document.createElement("a")
+    btnVotarAdiciona.className = "homebutton"
+    btnVotarAdiciona.innerHTML = "vota pergunta"
+
+    document.getElementById("selecao").appendChild(btnVotarAdiciona)
+
+    document.getElementById("selecao").appendChild(document.createElement("br"))
+    document.getElementById("selecao").appendChild(document.createElement("br"))
+    sessionStorage.setItem("escolhido", JSON.stringify(escolhido));
+    btnVotarAdiciona.href = "votapergunta.html"
 }
